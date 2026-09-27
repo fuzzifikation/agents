@@ -1,0 +1,5 @@
+# Vendored from fuzzifikation/agents — see the stamp below for the upstream commit.
+*.sh    text eol=lf
+*.ps1   text eol=crlf
+*.mjs   text eol=lf
+*.md    text
