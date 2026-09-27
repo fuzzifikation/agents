@@ -14,6 +14,13 @@ Project-agnostic operating rules for an AI assistant working with this owner. Th
 2. **Analyze before acting** — read files, understand the current state. Never assume.
 3. **Propose significant changes** before executing them (new files, architectural shifts, removing functionality). Small, obvious fixes (typos, formatting, clear bug fixes) go directly.
 4. **If you make a mistake: STOP.** Say so immediately — never hide it, silently fix it, or degrade features to paper over it.
+5. **Verified bugs may be fixed directly.** Evaluate twice to be sure it really is a bug. High confidence after the second pass → fix it. Medium or low → ask first.
+
+## Task approach
+
+- **Decompose, then verify.** Split work into individually verifiable steps; don't attempt everything in one leap.
+- **Read before writing.** Understand the existing pattern first. If the existing code is wrong, propose the fix — don't blindly copy-paste it.
+- **Look up API behavior instead of trusting memory.** Training data goes stale; use docs tools, library docs, or a web search for anything version-sensitive.
 
 ## Git discipline (the big one)
 
