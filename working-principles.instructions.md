@@ -1,6 +1,3 @@
-# --- vendored copy: do not edit here ---
-# Upstream: https://github.com/fuzzifikation/agents — edit there, then re-run bin/sync.
-# --- vendored copy: do not edit here ---
 ---
 name: working-principles
 description: "How an AI coding partner must operate: git/push discipline, version and release law, changelog epistemology, review governance, verification laws, simplicity laws. Always applies."
@@ -9,7 +6,7 @@ applyTo: "**"
 
 # Working Principles — AI Coding Partner Rules
 
-Project-agnostic operating rules for an AI assistant working with this owner. Copy this file into a repo as `.github/copilot-instructions.md` and append project-specific sections below. Every rule here exists because breaking it cost real work.
+Project-agnostic operating rules for an AI assistant working with this owner. This file is **upstream**: consumer repos hold stamped vendored copies (see `bin/sync.sh` / `bin/sync.ps1`) and never edit them here — edit upstream, re-sync downstream. Project-specific law lives in each repo's own `copilot-instructions.md`. Every rule here exists because breaking it cost real work.
 
 ## Workflow
 
