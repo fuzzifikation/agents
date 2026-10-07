@@ -1,12 +1,12 @@
 ---
 name: Text Style
-description: "How this owner's prose must read: no AI filler, repetition only when marked, structure follows length, topic first and punch last, one name per thing. Governs narrative text, not code."
+description: "How this owner's prose must read: no AI filler, repetition only when marked, structure follows length, topic first and punch last, one name per thing, comparisons like-for-like. Governs narrative text, not code."
 applyTo: "**/*.md,**/*.tex,**/*.rst,**/*.txt"
 ---
 
 # Text Style — Prose Law for AI-Authored Text
 
-Position: prose is good when a skimming reader ends up correct and a careful reader is never bored. Everything below serves one of those two readers. Kill the filler (§1), mark the repetition you keep (§2), keep one name per thing (§3), put the point where the eye lands (§4), frame long units at both ends (§6), then prove it with the audit in §5 and the test in §8. A short text gets no frame: structure follows length.
+Position: prose is good when a skimming reader ends up correct and a careful reader is never bored. Everything below serves one of those two readers. Kill the filler (§1), mark the repetition you keep (§2), keep one name per thing and compare like with like (§3), put the point where the eye lands and never bury it under a comma (§4), frame long units at both ends (§6), then prove it with the audit in §5 and the test in §8. A short text gets no frame: structure follows length.
 
 Rules for anything a human will read: docs, READMEs, changelogs, release notes, design docs, papers, lecture notes, long commit messages. Code is not prose: identifiers and comments obey the simplicity laws in `working-principles.instructions.md`. A project may add a domain overlay (LaTeX/math, legal, marketing) that tightens these rules; it may not loosen them.
 
@@ -16,7 +16,7 @@ Every rule here exists because its violation was found in real text. Cite the ru
 
 ## 1 Kill criteria
 
-1. **No announcers.** Never state that you are about to say something. Dead on sight: "In this section we…", "It is worth noting", "We now turn to", "As we will see", "Note that" unless it introduces a genuine trap. A long unit still needs an opening preview (rule 28) — that is content, not an announcement.
+1. **No announcers.** Never state that you are about to say something. Dead on sight: "In this section we…", "It is worth noting", "We now turn to", "As we will see", "Note that" unless it introduces a genuine trap. A long unit still needs an opening preview (rule 30) — that is content, not an announcement.
 2. **No paraphrase twins.** If a sentence begins "In other words", "This means", "That is,", one of the two halves dies. Per-sentence test: does it add information, a consequence, or an example? If none of the three, delete it.
 3. **One rhetorical template per section.** "X alone does not establish Y", "is not sufficient evidence", "does not certify" — each shape once per section, then cut the claim or word it differently. Nine identically shaped sentences in one document is a machine fingerprint even when all nine are true.
 4. **No filler adjectives.** Banned: crucial, vital, key, powerful, robust (unless a term of art), significant/significantly (unless a statistical claim), seamless, inherent, pivotal, comprehensive, delve, leverage, showcase, underscore, facilitate, utilise, furthermore, moreover, notably, additionally, particularly, testament, landscape. This is the excess vocabulary LLMs sprayed over technical and academic prose after 2022: *delve* ran ~25× above trend by 2024, *showcase* and *underscore* ~9× (Kobak et al. 2024). A repo's own terms of art (vendor, stamp, ledger, law) are exempt — they name things.
@@ -44,20 +44,24 @@ Repetition for emphasis is legitimate. **Unmarked** repetition is a defect: the 
 16. **Same thing, same name.** Never vary a technical term to avoid sounding repetitive: "the actual regressor" does not become "the signal", "the input", "the driving term" in consecutive sentences. Elegant variation is a fault in prose and a correctness bug in code.
 17. **Names pay rent** (Structural Review agent): do not coin a term, macro, or named constant for something mentioned once. Halmos: the best notation is no notation.
 
+18. **Compare like with like.** A comparison, a contrast and a parallel construction must join two things of the same type: parameters with parameters, not a parameter with a controller; a magnitude with a magnitude, not a magnitude with a relation; a function with a function, not a function with the act of changing one. The tell is "uses X rather than doing Y" — join a noun with a noun or a verb with a verb. The reader can usually guess the intent, and that is no defence: a mixed comparison shows that the writer has not thought the distinction, which is why it belongs next to unit errors in the ranking of stupid mistakes. Fix the type, not the wording. "Before adjusting a controller online we ask what we would do with known parameters" became "Before adjusting a controller's parameters over time, we design a fixed-parameter controller for a known plant".
+
 ## 4 Sentences
 
-18. **Topic first, punch last.** Readers take the sentence start as context and the sentence end as the point (Gopen & Swan). Put the condition where the eye starts, the consequence where the sentence lands. Weak: "The build fails, in the case where the flag is unset." Strong: "With the flag unset, the build fails."
-19. **Under ~25 words.** A longer sentence is licensed only when the dependency between its clauses is itself the content. Short prose measurably out-cites long prose (Weinberger et al. 2015).
-20. **Verbs, not nominalisations.** "We exploit", not "we make use of"; "the error converges", not "the error exhibits convergence". Passive voice only when the actor is genuinely irrelevant, and never "it is seen" without saying by whom and from what.
-21. **No hand-waving words.** "Clearly", "obviously", "trivially", "simply", "easily", "it can be shown", "one can show", "it is well known" either carry the argument or a citation, or they go. They are how authors hide work they have not checked (Knuth), and in documentation they mark where the bug is.
-22. **No "-ing" tails selling significance** — "…, thereby ensuring consistency", "…, highlighting the need for care". Cut, or state the consequence in its own sentence.
-23. **No padding structures:** rule-of-three lists where two items serve; negative parallelism ("not only X but also Y"); a section-closing summary sentence ("Overall, these results show…", "Together, these findings…"); a hedging preamble followed by the assertion anyway. Long units close with a consolidation device instead — rule 29.
+19. **Topic first, punch last.** Readers take the sentence start as context and the sentence end as the point (Gopen & Swan). Put the condition where the eye starts, the consequence where the sentence lands. Weak: "The build fails, in the case where the flag is unset." Strong: "With the flag unset, the build fails."
+20. **Under ~25 words.** A longer sentence is licensed only when the dependency between its clauses is itself the content. Short prose measurably out-cites long prose (Weinberger et al. 2015).
+21. **Verbs, not nominalisations.** "We exploit", not "we make use of"; "the error converges", not "the error exhibits convergence". Passive voice only when the actor is genuinely irrelevant, and never "it is seen" without saying by whom and from what.
+22. **No hand-waving words.** "Clearly", "obviously", "trivially", "simply", "easily", "it can be shown", "one can show", "it is well known" either carry the argument or a citation, or they go. They are how authors hide work they have not checked (Knuth), and in documentation they mark where the bug is.
+23. **No "-ing" tails selling significance** — "…, thereby ensuring consistency", "…, highlighting the need for care". Cut, or state the consequence in its own sentence.
+24. **No padding structures:** rule-of-three lists where two items serve; negative parallelism ("not only X but also Y"); a section-closing summary sentence ("Overall, these results show…", "Together, these findings…"); a hedging preamble followed by the assertion anyway. Long units close with a consolidation device instead — rule 31.
+
+25. **Plain statement first, qualification after.** When a plain sentence and a hedged one cost the same words, write the plain one and give the qualification its own sentence. "We often omit $(t)$ from signals, but not their time dependence" is three clauses doing one job; "We often omit $(t)$ from time-dependent signals" is one. Forbidden shapes: a main clause dragged along by a contradictory tail ("X, but not Y", "X, and not Y"); chained relatives ("…, which is why …, which is what …"); any point that survives only if the reader keeps the subordinate clause. If the hedge carries information it earns a sentence; if it does not, delete it. Engineers write the shortest sentence that cannot be misread, and a political-science major writes the longest one that cannot be blamed.
 
 ## 5 Process
 
-24. **Cite the rule.** Every AI-assisted prose edit names the rule that motivated it. No rule, no edit — it was decoration, so revert it.
-25. **A prose edit must be provably prose-only.** Before and after, compare per-file counts of headers, links, code fences, inline code spans, and any math or verbatim blocks. Word count may move; those counts may not. If they move, the edit changed content and needs a technical justification.
-26. **Audit before declaring done.** Expect near-zero hits; justify each survivor out loud. Quoted examples are exempt: a file naming the crimes must match its own grep, and its prose still must not. POSIX:
+26. **Cite the rule.** Every AI-assisted prose edit names the rule that motivated it. No rule, no edit — it was decoration, so revert it.
+27. **A prose edit must be provably prose-only.** Before and after, compare per-file counts of headers, links, code fences, inline code spans, and any math or verbatim blocks. Word count may move; those counts may not. If they move, the edit changed content and needs a technical justification.
+28. **Audit before declaring done.** Expect near-zero hits; justify each survivor out loud. Quoted examples are exempt: a file naming the crimes must match its own grep, and its prose still must not. POSIX:
 
 ```sh
 grep -rniE 'in this section|it is worth|we now turn|note that|as we will see|clearly|obvious|trivial|simply|in other words|this means|it can be shown|it is well known' --include='*.md' --include='*.tex' .
@@ -77,13 +81,13 @@ Short texts need no frame: a preamble and a recap around 600 words is two paragr
 | ≤ 500 words (screen) / ≤ 1000 (print) | nothing — headings carry it | nothing |
 | above that, up to a chapter | preview: 2–4 sentences | nothing |
 | a chapter or long section (> ~1500 screen / ~3000 print words, or ≥ 5 subsections) | preview | consolidation |
-| whole document (> ~6000 words) | standalone front matter (rule 31) + preview per unit | consolidation per unit |
+| whole document (> ~6000 words) | standalone front matter (rule 33) + preview per unit | consolidation per unit |
 
-27. **Structure follows length, not taste.** Apply the table. Adding a recap to a short note is a rule violation, not caution.
-28. **A long unit opens with a preview, never an announcer.** A preview delivers three things an announcer does not: the conclusion or claim, the order of the argument and why that order, and the stake (which decision the reader can make afterwards). Under ~120 words for a chapter. If you cannot write the conclusion in the first sentence, the unit has no point yet — find it before writing prose. (Advance organizers: Ausubel 1968; readers given the organizing context *before* reading comprehend and recall far more of the same text: Bransford & Johnson 1972; cues that organize help learners select and connect: Mayer's signaling principle.)
-29. **A long unit closes by consolidating, not paraphrasing.** Reading a prose recap of what was just said is rereading, a low-utility technique (Dunlosky et al. 2013), and it is the classic machine tell ("Overall, …"). Use one of the three devices that do work, at most five items: **retrieval prompts** (questions the reader answers from memory — prequestions and postquestions both out-predict rereading); **consequence statements** (what the result forbids, what breaks if the assumption dies); **a decision rule** (how to choose in practice). Note the conflict in the literature and settle it by who does the work: students *writing* a summary gains (~0.8 in Marzano et al. 2001), generic instruction to summarize rates low (Dunlosky et al. 2013). So make the reader produce something; never recite at them.
-30. **Pass the skim test.** A reader who reads only the title, the headings, the first paragraph of each unit and the last consolidation must come away with a *correct but incomplete* model — never a wrong one. If the skim path misleads, fix the structure: move the conclusion up, rename the heading, or rewrite the preview. This is a check, not a licence to write bad body prose: readers who skim exist (rule 31), and they are your cheapest audience.
-31. **Front matter for decision-makers stands alone.** For a report, proposal or management-facing document, the opening summary must be complete without the body: state the conclusion, the ask, the cost, the risk — never "this document discusses X", which names a topic instead of a position. Order by importance, not by discovery, so every paragraph survives being the last one read (inverted pyramid; practitioner guidance from the same skimming evidence). Where the discipline expects method-first (a paper's IMRaD, a proof's lemma sequence), keep the discipline and add the conclusion in the abstract or first paragraph — do not choose between them.
+29. **Structure follows length, not taste.** Apply the table. Adding a recap to a short note is a rule violation, not caution.
+30. **A long unit opens with a preview, never an announcer.** A preview delivers three things an announcer does not: the conclusion or claim, the order of the argument and why that order, and the stake (which decision the reader can make afterwards). Under ~120 words for a chapter. If you cannot write the conclusion in the first sentence, the unit has no point yet — find it before writing prose. (Advance organizers: Ausubel 1968; readers given the organizing context *before* reading comprehend and recall far more of the same text: Bransford & Johnson 1972; cues that organize help learners select and connect: Mayer's signaling principle.)
+31. **A long unit closes by consolidating, not paraphrasing.** Reading a prose recap of what was just said is rereading, a low-utility technique (Dunlosky et al. 2013), and it is the classic machine tell ("Overall, …"). Use one of the three devices that do work, at most five items: **retrieval prompts** (questions the reader answers from memory — prequestions and postquestions both out-predict rereading); **consequence statements** (what the result forbids, what breaks if the assumption dies); **a decision rule** (how to choose in practice). Note the conflict in the literature and settle it by who does the work: students *writing* a summary gains (~0.8 in Marzano et al. 2001), generic instruction to summarize rates low (Dunlosky et al. 2013). So make the reader produce something; never recite at them.
+32. **Pass the skim test.** A reader who reads only the title, the headings, the first paragraph of each unit and the last consolidation must come away with a *correct but incomplete* model — never a wrong one. If the skim path misleads, fix the structure: move the conclusion up, rename the heading, or rewrite the preview. This is a check, not a licence to write bad body prose: readers who skim exist (rule 33), and they are your cheapest audience.
+33. **Front matter for decision-makers stands alone.** For a report, proposal or management-facing document, the opening summary must be complete without the body: state the conclusion, the ask, the cost, the risk — never "this document discusses X", which names a topic instead of a position. Order by importance, not by discovery, so every paragraph survives being the last one read (inverted pyramid; practitioner guidance from the same skimming evidence). Where the discipline expects method-first (a paper's IMRaD, a proof's lemma sequence), keep the discipline and add the conclusion in the abstract or first paragraph — do not choose between them.
 
 ## 7 Domain overlays
 
@@ -94,12 +98,12 @@ Typeset mathematics needs more than this file: displays punctuated as sentence p
 Five questions, answered from memory before re-reading a rule. A rule you cannot recall was not worth writing.
 
 1. Which rule fires on: "In this section, we will see why the cache matters."?
-2. A paragraph ends "…, thereby ensuring consistency." Which rule, and what replaces it?
+2. A sentence reads "We omit the argument from signals, but not their time dependence." Which rule, and what replaces it?
 3. You want to repeat a warning for the third time. What must the repeat carry to be legal?
-4. A 200-word README section now has an intro and a summary. Guilty of what?
+4. "Before adjusting a controller online we ask what we would do with known parameters." Which rule, and what is the fix?
 5. Your document's skim path (title, headings, first paragraphs) leaves a manager with the wrong conclusion. What is broken — the prose or the structure?
 
-Answers: 1 (rule 1 — and the sentence still owes its claim); 2 (rule 22 — state the consequence in its own sentence or cut it); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rules 27, 2 and 23: short texts get no frame); 5 (the structure — rule 30; fix the order, not the adjectives).
+Answers: 1 (rule 1 — and the sentence still owes its claim); 2 (rule 25 — plain statement first: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18 — a parameter may be compared only with a parameter: "Before adjusting a controller's parameters over time, we design a fixed-parameter controller for a known plant"); 5 (the structure — rule 32; fix the order, not the adjectives).
 
 ## 9 Sources
 
@@ -113,5 +117,5 @@ Answers: 1 (rule 1 — and the sentence still owes its claim); 2 (rule 22 — st
 8. Ausubel, *Educational Psychology: A Cognitive View*, 1968 — the advance organizer: what comes before the text shapes what the text can become in the reader's head.
 9. Bransford & Johnson, *Contextual prerequisites for understanding*, JVLVB 11(6), 1972 — the same passage, comprehensible or incomprehensible depending on whether the organizing context came before or after.
 10. Mayer, *Multimedia Learning*, 2nd ed., 2009 — signaling helps selection and organization; coherence and redundancy say unneeded words cost learning. Structure yes, repetition no.
-11. Marzano, Pickering & Pollock, *Classroom Instruction That Works*, 2001 — summarization near d≈0.8 **when the learner produces it**. Read against Dunlosky et al. (source 5), which rates summarization low: the disagreement is about who does the work. Rule 29 settles it by making the reader produce something.
+11. Marzano, Pickering & Pollock, *Classroom Instruction That Works*, 2001 — summarization near d≈0.8 **when the learner produces it**. Read against Dunlosky et al. (source 5), which rates summarization low: the disagreement is about who does the work. Rule 31 settles it by making the reader produce something.
 12. Weinreich et al., *Not Quite the Average: An Empirical Study of Web Use*, ACM TOWeb 2(1), 2008, and the Nielsen Norman Group analyses built on it (*How Little Do Users Read*, *Inverted Pyramid*) — reading time grows ~4.4 s per extra 100 words, so the fraction read shrinks as length grows; conclusions belong at the front.
