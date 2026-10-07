@@ -40,8 +40,10 @@ function Vendor([string]$SrcFile, [string]$DstFile) {
     $m = Select-String -LiteralPath $DstFile -Pattern 'agents @ [^,]*' | Select-Object -First 1
     if ($m) { $old = $m.Matches[0].Value } else { $old = 'untracked version' }
   }
-
-  $lines = @(Get-Content -LiteralPath $SrcFile)
+  
+  # Read as UTF-8 explicitly: Get-Content on Windows PowerShell 5.1 decodes a BOM-less
+  # file with the ANSI codepage, so every em dash would arrive as mojibake.
+  $lines = @([System.IO.File]::ReadAllLines($SrcFile, [System.Text.UTF8Encoding]::new($false)))
   $out = New-Object System.Collections.Generic.List[string]
   if ($lines.Count -gt 0 -and $lines[0] -eq '---') {
     $dashes = 0; $stamped = $false
@@ -56,6 +58,11 @@ function Vendor([string]$SrcFile, [string]$DstFile) {
   }
   # UTF-8 without BOM, LF endings — VS Code and git both prefer bytes nobody has to explain.
   [System.IO.File]::WriteAllText($DstFile, (($out -join "`n") + "`n"), (New-Object System.Text.UTF8Encoding($false)))
+  # Tripwire: C3 A2 is "â", the fingerprint of UTF-8 decoded as CP1252 and re-encoded.
+  $bytes = [BitConverter]::ToString([System.IO.File]::ReadAllBytes($DstFile))
+  if ($bytes -match 'C3-A2|C3-83') {
+    Write-Error "mojibake written to $DstFile - the source was read with the wrong encoding."
+  }
   Write-Host "  $(Split-Path -Leaf $DstFile): $old -> @ $Sha"
 }
 
