@@ -6,7 +6,7 @@ applyTo: "**/*.md,**/*.tex,**/*.rst,**/*.txt"
 
 # Text Style
 
-Good prose leaves a skimming reader correct and never bores a careful one. It applies to anything a human reads: docs, READMEs, changelogs, design docs, papers, lecture notes, long commit messages. Code obeys `working-principles.instructions.md`. A project may add an overlay that tightens these rules; it may not loosen them.
+Good prose leaves a skimming reader correct and never bores a careful one. It applies to anything a human reads: docs, READMEs, changelogs, design docs, papers, lecture notes, long commit messages. Code obeys the simplicity laws WP30–WP36 in `working-principles.instructions.md`. A project may add an overlay that tightens these rules; it may not loosen them.
 
 Voice: dry, direct, mean about the engineering, never about the reader.
 
