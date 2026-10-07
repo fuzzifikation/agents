@@ -58,6 +58,7 @@ vendor() {
 
 echo "sync -> $DEST"
 vendor "$SRC/working-principles.instructions.md" "$DEST/instructions/working-principles.instructions.md"
+vendor "$SRC/text-style.instructions.md" "$DEST/instructions/text-style.instructions.md"
 
 if [ "$WITH_AGENTS" -eq 1 ]; then
   vendor "$SRC/structural-review.agent.md" "$DEST/agents/structural-review.agent.md"

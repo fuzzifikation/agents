@@ -7,6 +7,7 @@ A home for agents and working rules that were developed while working *with* AI,
 | Path | What it is |
 |---|---|
 | [`working-principles.instructions.md`](working-principles.instructions.md) | How an AI partner must operate on this owner's repos: git/push discipline, version and release law, changelog epistemology, review governance, verification laws, simplicity laws. Project-agnostic by design. |
+| [`text-style.instructions.md`](text-style.instructions.md) | Prose law for anything a human reads: fluff kill criteria, marked-repetition protocol, sentence architecture, naming discipline, audit greps, sources. Globbed to prose files so it stays out of pure-code sessions. |
 | [`structural-review.agent.md`](structural-review.agent.md) | Language-agnostic structural reviewer agent: minimal-graph goal, rent/placement/wiring lenses, deterministic tooling. Read-only, never edits. |
 | [`structural-review-assets/`](structural-review-assets/) | The agent's cached tooling (`extract-ts.mjs`, `analyze.mjs`) — same layout as inside a consumer repo, so the agent's relative asset path works in both homes. |
 | [`bin/sync.sh`](bin/sync.sh), [`bin/sync.ps1`](bin/sync.ps1) | Vendoring sync. Copy this repo's files into another repo (or your VS Code user profile). Windows + Linux/WSL. |
@@ -18,7 +19,7 @@ This repo is **upstream law**. Consumer repos hold **stamped copies**, never liv
 Two rules make it safe:
 
 1. **Never edit a vendored copy.** It carries a stamp naming its upstream commit. Fix the law upstream, then re-sync every repo that rides it.
-2. **Keep the two halves separated.** `working-principles.instructions.md` stays project-agnostic; project-specific law (architecture, build commands, standing rulings) lives in that repo's own `copilot-instructions.md`. If field experience in a project improves the general law, the improvement moves upstream by hand.
+2. **Keep the two halves separated.** `working-principles.instructions.md` and `text-style.instructions.md` stay project-agnostic; project-specific law (architecture, build commands, standing rulings) lives in that repo's own `copilot-instructions.md`, and a domain overlay (typeset-mathematics prose rules, say) lives in that project's own file. If field experience in a project improves the general law, the improvement moves upstream by hand.
 
 ## Usage
 

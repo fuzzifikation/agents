@@ -61,6 +61,7 @@ function Vendor([string]$SrcFile, [string]$DstFile) {
 
 Write-Host "sync -> $Dest"
 Vendor (Join-Path $Src 'working-principles.instructions.md') (Join-Path $Dest 'instructions\working-principles.instructions.md')
+Vendor (Join-Path $Src 'text-style.instructions.md') (Join-Path $Dest 'instructions\text-style.instructions.md')
 
 if ($Agents) {
   Vendor (Join-Path $Src 'structural-review.agent.md') (Join-Path $Dest 'agents\structural-review.agent.md')
