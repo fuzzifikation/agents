@@ -10,7 +10,7 @@ Good prose leaves a skimming reader correct and never bores a careful one. It ap
 
 Voice: dry, direct, mean about the engineering, never about the reader.
 
-Cite the rule number for every prose edit. Rule numbers are permanent identifiers — other repositories cite them. Never renumber; a new rule takes the next free number.
+Cite the rule number for every prose edit. Rule numbers are permanent identifiers — other repositories cite them. Never renumber; a new rule takes the next free number. A rule therefore sits under its own topic, not in numeric order: 34–36 belong to §4 and sit after 25. Do not "fix" that.
 
 ## 1 Kill criteria
 
@@ -57,7 +57,7 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
     (c) A locative names its container, and the preposition matches that category: *in* a field, *in* a set, *in* an equation, *in* Case 4, *at* a frequency. "There the unknown parameters still matter" names no container, so the reader picks one.
     (d) After a display, never open with "Here $x$ is…". Name the display ("In \eqref{eq:PE}, $\succeq$ denotes…") or make the thing the subject ("The inequality $e_c^2\le2V_0$ follows from the Lyapunov bound").
     (e) A sentence-level "…, which proves X" is legal only when the preceding clause is the sole possible referent. It is the prescribed cure for a bare "This is…", not a crime.
-    (f) Exempt: existential "there is/are" points nowhere.
+    (f) Exempt: existential "there is/are" points nowhere, and so does the cleft "it is the error variable *that* has an equilibrium".
     Test before shipping: name the antecedent in three words. If you cannot, the sentence has no content and no synonym will give it one.
 36. **Characters as subjects, actions as verbs.** "The designer chose a lower gain", not "a lower gain was chosen" and not "the choice of a lower gain was made". Zombie nouns (*the convergence of*, *the implementation of*) evict the actor and the action at once. Self-check twenty consecutive sentences: at least 70% must take a character as subject and at least 70% an action as main verb. Rule 21 kills the nominalisation; this one hunts the missing actor.
 
@@ -74,9 +74,16 @@ grep -rniE 'does not establish|not sufficient|not a proof|not certify|does not b
 grep -rniE ', (ensuring|highlighting|underscoring|showcasing|demonstrating|indicating|reflecting|enabling|revealing)|not only|in summary|in conclusion|^overall|together, these|it is important' --include='*.md' --include='*.tex' .
 grep -rniE '\b(control|theory|field|discipline|method|approach|framework|literature|objective|definition|problem|analysis|design|chapter|section)\s+(asks|wants|argues|claims|believes|knows|worries|cares|insists|admits|prefers|refuses|decides|settles|forgets|remembers|notes|observes)\b' --include='*.md' --include='*.tex' .
 grep -rniE '(^|[.;:] )(This|That|These|Those)\s+(is|are|shows|proves|means|follows|fails|gives|makes|leaves|requires|explains|implies)|(^|[.;:] )It\s+(is|does|follows|holds|can|may|gives|needs|makes|costs)|(^|[.;:] )(There|Here)[,\s]' --include='*.md' --include='*.tex' .
+grep -rniE '\b(the|this|that|a|an|its|our|their)\s+([a-z]+(tion|sion|ment|ance|ence|ing))\s+of\b' --include='*.md' --include='*.tex' .
 ```
 
 Windows: `Select-String -Path *.md,*.tex -Pattern '<same pattern>'`. Reading the hits: more than one per section on grep 3 breaks rule 3; any hit on grep 5 breaks rule 34 unless the subject has a mouth; on grep 6 existential "there is/are" is a false positive and a demonstrative already followed by a noun is clean, so every other survivor owes you a three-word antecedent.
+
+A grep counts candidates, not violations, and reading is the audit. Three standing false positives:
+
+* **Grep 7 (rule 36) and its evil twin.** "*the convergence of*", "*the implementation of*" name a hidden actor. Never audit rule 36 with an `is/are` + participle grep: in technical prose *is bounded*, *is stable*, *is Hurwitz*, *is positive definite* are predicate adjectives, not hidden actors. One such grep reported 32 violations in a chapter where 24 were "is bounded".
+* **Grep 2 and grep 4 keep the load-bearing words.** "additionally" inside a definition ("asymptotic stability additionally requires convergence") states an extra condition; "not only" ("holds from every initial state, not only from nearby ones") excludes a real alternative. Both stay.
+* **Math nouns are not zombie nouns.** "the solution of the Lyapunov equation", "a function of $x$", "the derivative of the bound" are the subject, not a verb in disguise.
 
 ## 6 Long texts
 
@@ -109,8 +116,9 @@ Answer from memory. A rule you cannot recall was not worth writing.
 4. "Before adjusting a controller online we ask what we would do with known parameters." Which rule, and what is the fix?
 5. The skim path leaves a manager with the wrong conclusion. What is broken — the prose or the structure?
 6. "Robust control asks whether the closed loop is stable. There the unknown parameters still matter." Name both rules and both fixes.
+7. "The rate of convergence is fixed by the pole of the reference model, and the estimate carries the movement of the model itself." Name the rule and rewrite both halves.
 
-Answers: 1 (rule 1, and the sentence still owes its claim); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds").
+Answers: 1 (rule 1, and the sentence still owes its claim); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 36 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves").
 
 ## 9 Sources
 

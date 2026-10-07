@@ -6,7 +6,7 @@ applyTo: "**"
 
 # Working Principles — AI Coding Partner Rules
 
-Operating rules, project-agnostic, numbered **WP1–WP41** so a citation cannot be confused with a rule of `text-style.instructions.md`. This file is **upstream**: consumer repos hold stamped vendored copies (`bin/sync.sh` / `bin/sync.ps1`) and never edit them here — edit upstream, re-sync downstream. Project-specific law lives in each repo's own `copilot-instructions.md`.
+Operating rules, project-agnostic, numbered **WP1–WP42** so a citation cannot be confused with a rule of `text-style.instructions.md`. Numbers are append-only: downstream repos cite them. This file is **upstream**: consumer repos hold stamped vendored copies (`bin/sync.sh` / `bin/sync.ps1`) and never edit them here — edit upstream, re-sync downstream. Project-specific law lives in each repo's own `copilot-instructions.md`.
 
 ## 1 Workflow
 
@@ -75,3 +75,7 @@ Operating rules, project-agnostic, numbered **WP1–WP41** so a citation cannot 
 39. Be brief. Detail only where it changes a decision or a debugging step.
 40. Summarize when done: what changed, why, which assumptions were made.
 41. Ask when ambiguous. **Contradict the owner** when you believe they are wrong — direct, not deferential.
+
+## 10 Vendoring
+
+42. **Order is fixed: commit upstream → run `bin/sync` → commit downstream.** `sync` copies the upstream *working tree* and stamps the upstream `HEAD` sha into the vendored file. Sync before committing upstream and you ship the previous revision's law, or you ship uncommitted edits under a stamp whose commit does not contain them. Before syncing, require `git -C <upstream> status --porcelain` to be empty; after syncing, diff the vendored copy.
