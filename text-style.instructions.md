@@ -28,17 +28,17 @@ The law is recalled as eight invariants. The numbered rules are their consequenc
 1. **No two sentences with the same meaning.** When two consecutive sentences say the same thing, cut one; keep the clearer. “In other words”, “This means” and “That is” flag the test, they do not decide it: “Run `umixer check --strict`. This means CI fails on the first schema drift.” stays, because the second sentence adds a consequence the first does not spell out. A sentence must add information, consequence, or example; one that adds none, delete.
 2. **One rhetorical template per section.** “X alone does not establish Y”, “is not sufficient evidence”, “does not certify”, “not X — Y”, “not only X but also Y”, “it is not about X, it is about Y”: each shape once per section, maximum. Nine identically shaped caveats read as machine text even when all nine are true.
 3. **No filler adjectives.** Banned: crucial, vital, key, powerful, robust (unless a term of art), significant/significantly (unless a statistical claim), seamless, inherent, pivotal, comprehensive, delve, leverage, showcase, underscore, facilitate, utilise, furthermore, moreover, notably, additionally, particularly, testament, landscape. A project's own terms of art are exempt: they name things.
-4. **Hidden logic becomes explicit.** Where "often", "typically", "generally" or "usually" hides a testable condition, write the condition: when it holds, and when it does not. "While", "as" and "since" hide which relation holds — time or contrast; write the one that holds. A sentence reporting only states names the decision or consequence that makes it worth stating; if it names none, delete it.
+4. **Hidden logic becomes explicit.** Where "often", "typically", "generally" or "usually" hides a testable condition, write the condition: when it holds, and when it does not. "While", "as" and "since" hide which relation holds (time or contrast); write the one that holds. A sentence reporting only states names the decision or consequence that makes it worth stating; if it names none, delete it.
 5. **One image per idea, and never explain it.**
 6. **Stay in the subject's words; an analogy introduces itself.** Each subject has words it uses about itself; use those. In writing about writing these are: topic position, stress position, antecedent, hedge, register. "Punch", "pay rent", "has no mouth" are borrowed images, not terms of this subject. Any analogy is legal when it helps the reader understand and says what it is: "as an analogy", "think of this like". An unannounced analogy moves the reader out of the subject and back on every use; an announced one warns the reader before the switch.
-7. **Max one colon or dash per sentence.** Judge dash density inside a sentence, not dashes per document. A full stop is not a personality flaw.
+7. **No em dashes; parentheses carry asides.** The em-dash aside is THE giveaway of AI text; source 7 listed em-dash rhythm among the machine signs and this file capped its density instead, which missed the point. Parentheses carry asides and examples, beside the word they clarify: an example after the wrong noun makes the reader rule out the wrong reading before learning anything. A colon introduces, a comma binds apposition, a full stop emphasizes; a full stop is not a personality flaw. Max one colon per sentence. Ranges and dates keep the en dash (rules 33–37, 2015–2024).
 
 ## 2 Repetition
 
 Unmarked repetition is a defect: the reader cannot tell emphasis from accident, and the third copy is where reading stops.
 
 8. **State a claim in full once per document**, where it is established. Later appearances are cross-references. Full restatement is legal in three places only: the summary at the top, the user-facing entry point, and the place of application. A warning gets its second full statement where it applies; two per document, maximum.
-9. **Deliberate recaps announce themselves** with the project's marker — "(recall §2.4)", "(standing ruling)" — so one grep lists every recap and each can be audited for earning its place.
+9. **Deliberate recaps announce themselves** with the project's marker ("(recall §2.4)", "(standing ruling)") so one grep lists every recap and each can be audited for earning its place.
 10. **A recap must demand something.** Rereading is a demonstrably poor way to learn, and a prose recap demands nothing. Write pointer plus question: "The check is the one in §2.4. Which of the two inputs makes it fail, and why?"
 
 ## 3 Names
@@ -69,7 +69,7 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 28. **Reread as the reader, once, before sending.** For every changed paragraph: does the first sentence stand alone (27), does the verb sit within a few words of the subject (26), can you name each sentence's actor in three words (25)? Reading load is the defect; greps cannot feel it.
 29. **Replies are docs.** The law governs AI chat replies and reasoning exactly like files: the first sentence carries the point (rule 27), then the support. No sentence about your own previous message ("the mechanism answer stands as given"); no achievement lists about yourself; no clipped fragments standing in for content ("no theater, just work"). Brevity excuses nothing: an answer that fits in five sentences is five sentences, and those five still obey rules 26 and 27.
 30. **Formatting is not content.** Chatbots fake structure with formatting: bold on every instance of a term, "Label: fact" bullets, Title Case headings, scattered headings (skipped levels, one-line sections), "Key takeaways" boxes, emoji. Prose carries conclusions. Use bullets only where items are truly parallel, tables where the reader compares or executes, and sentence case for headings.
-31. **No manual line wraps.** You are not the editor; editors exist. A paragraph is one line: blank lines and headings break it, nothing else. Tables, command lists, code, and diagrams own their rows. Hand-wrapped source is permanent diff noise — it buries real changes under re-wraps in every future review.
+31. **No manual line wraps.** You are not the editor; editors exist. A paragraph is one line: blank lines and headings break it, nothing else. Tables, command lists, code, and diagrams own their rows. Hand-wrapped source is permanent diff noise: it buries real changes under re-wraps in every future review.
 32. **No chatbot residue.** Correspondence is not text: “Certainly!”, “Great question”, “I hope this helps”, “let me know if you'd like…” cut on sight. Text does not narrate its own making (“I kept your wording”, “based on the provided sources”).
 
 The pattern sweep below stays available as a quick machine pass over rules 1–3, 20, 23 and 25 candidates. It lists candidates, never verdicts; reading is the audit.
@@ -102,7 +102,7 @@ Three standing false positives:
 * Superficial "-ing" tails: "highlighting", "ensuring", "fostering", "cultivating", "encompassing" (rule 20).
 * Negative parallelisms: "not only X but Y", "it is not just X, it's Y", "X rather than Y" where the contrast is decoration (rule 2; rule 15 when the halves are different types).
 * Adjective or phrase triples where two items serve (rule 21).
-* Dash rhythm: the habit of short phrase, dash, emphatic finish, repeated. Dense use reads as machine; presence does not. Rule 7 caps each sentence; the page rhythm is yours to judge.
+* Dash rhythm: short phrase, dash, emphatic ending, the habit repeated. Presence is the sign, not density; rule 7 bans the em dash.
 * Formatting signs: bold-for-emphasis everywhere, bold-label bullets, Title Case headings, scattered headings, emoji (rule 30).
 * Chat residue and procedural self-narration: "Certainly!", "I hope this helps", "let me know", "I preserved your wording", "while details are scarce" (rule 32).
 
@@ -114,7 +114,7 @@ Length decides structure. The table gives screen thresholds; print doubles them 
 
 | Unit length | Opening | Closing |
 |---|---|---|
-| ≤ 500 words (screen) / ≤ 1000 (print) | nothing — headings carry it | nothing |
+| ≤ 500 words (screen) / ≤ 1000 (print) | nothing; headings carry it | nothing |
 | above that, up to a chapter | preview: 2–4 sentences | nothing |
 | a chapter or long section (≤ 3000 words screen / 6000 print) | preview: 3–5 sentences | consolidation block (rule 35) |
 | whole document (> ~6000 words) | standalone front matter (rule 37) + preview per unit | consolidation per unit |
@@ -122,12 +122,12 @@ Length decides structure. The table gives screen thresholds; print doubles them 
 33. **Structure follows length, not taste.** Apply the table. Adding a recap to a short note is a violation, not caution.
 34. **A long unit opens with a preview, never an announcer.** The preview delivers the conclusion, the order of the argument and why that order, and the decision the reader can make afterwards. Under ~120 words for a chapter. If the conclusion will not fit in the first sentence, the unit has no point yet: find it before writing prose.
 35. **A long unit closes by consolidating, not paraphrasing.** At most five items, each one of: a retrieval prompt the reader answers from memory; a consequence statement (what the result forbids, what fails if the assumption is dropped); a decision rule for practice. Never a prose restatement of the unit's own sentences.
-36. **Pass the skim test.** Title, headings, the first paragraph of each unit and the last consolidation must leave the reader with a correct but incomplete model — never a wrong one. If the skim path misleads, fix the structure: move the conclusion up, rename the heading, or rewrite the preview.
+36. **Pass the skim test.** Title, headings, the first paragraph of each unit and the last consolidation must leave the reader with a correct but incomplete model, never a wrong one. If the skim path misleads, fix the structure: move the conclusion up, rename the heading, or rewrite the preview.
 37. **Front matter for decision-makers stands alone.** State the conclusion, the ask, the cost and the risk. Order by importance, not by discovery, so every paragraph survives being the last one read. Where the discipline expects method-first (a paper’s IMRaD, a proof’s lemma sequence), keep the discipline and put the conclusion in the abstract.
 
 ## 7 Overlays
 
-A domain needs more than this file — typeset mathematics, legal, marketing. That law lives in the project holding the problem: for the adaptive-control lecture notes, `writing-rules.md` beside `main.tex`. When a second project needs the same rules, promote them upstream by hand.
+A domain needs more than this file (typeset mathematics, legal, marketing). That law lives in the project holding the problem: for the adaptive-control lecture notes, `writing-rules.md` beside `main.tex`. When a second project needs the same rules, promote them upstream by hand.
 
 ## 8 Worked examples
 
@@ -146,21 +146,21 @@ Failing text and its fix, one line per case. The rule numbers carry the law behi
 11. A README note ending "**Key takeaways:**" plus three bolded bullets. Rule 30: mechanical bold and a takeaways box fake structure. Rule 33: a ≤500-word unit closes with nothing; state the one conclusion in prose or delete it.
 ## 9 Sources
 
-1. Gopen & Swan, *The Science of Scientific Writing*, American Scientist 78(6), 1990 — topic and stress positions (rule 16).
-2. Weinberger, Evans & Allesina, *Ten Simple (Empirical) Rules for Writing Science*, PLoS Comp. Biol. 11(4), 2015 — short sentences out-cite long ones (rule 17).
-3. Knuth, Cherry & Guibas, *Mathematical Writing*, 1989 — no "clearly/obviously/trivially"; text must carry the argument (rule 19).
-4. Halmos, *How to Write Mathematics* — notation economy (rule 14).
-5. Dunloski et al., *Improving Students' Learning With Effective Learning Techniques*, PSPI 14(1), 2013 — rereading low utility, retrieval and spacing high (rules 10, 35).
-6. Kobak et al., *Delving into ChatGPT usage in academic writing through excess vocabulary*, 2024 — LLM excess vocabulary: *delve* ~25× above trend by 2024, *showcase* and *underscore* ~9×; ≥10% of 2024 PubMed abstracts carried LLM signs (rule 3).
-7. Wikipedia, *Signs of AI writing* (project page, retrieved 2026-10) — the machine-sign catalog: significance puffery (AILEGACY), AI-vocabulary clusters (AIVOCAB), vague attribution (AIWEASEL), challenges-and-prospects closers (FACESCHALLENGES), superficial "-ing" analyses, rule-of-three (RO3), negative parallelisms, bold overuse (AIBOLD), Title Case headings, chat residue (COLLABCOMM), hedging disclaimers (AIDISCLAIMER), em-dash rhythm (AIDASH); plus the ineffective-indicators list and near-chance human detection studies (rules 20, 21, 30, 32).
-8. Ausubel, *Educational Psychology: A Cognitive View*, 1968 — the advance organizer (rule 34).
-9. Bransford & Johnson, *Contextual prerequisites for understanding*, JVLVB 11(6), 1972 — organizing context before reading raises comprehension of the same text (rule 34).
-10. Mayer, *Multimedia Learning*, 2nd ed., 2009 — signaling aids selection and organization; redundancy costs learning (rules 34, 35).
-11. Marzano, Pickering & Pollock, *Classroom Instruction That Works*, 2001 — summarization near d≈0.8 when the learner produces it; read against source 5, this settles rule 35 by making the reader produce something.
-12. Weinreich et al., *Not Quite the Average*, ACM TOWeb 2(1), 2008, and the Nielsen Norman analyses built on it — reading time grows ~4.4 s per extra 100 words, so conclusions belong at the front (rules 36, 37).
-13. Williams, Bizup & Trimble, *Style: Lessons in Clarity and Grace*, 12th ed., 2019 — characters as subjects, actions as main verbs, zombie nouns, twenty-sentence self-check at ~70% (rule 25).
-14. Zeiger, *Write Right! Communication Skills for Practicing Engineers*, 2nd ed., 2000 — engineering prose has no licence for ambiguity: repeat the noun (rule 24a).
-15. Sainani, *Writing in the Sciences*, Stanford University, 2012– — agent as subject, verbs instead of nominalisations (rule 25).
-16. Google, *Developer Documentation Style Guide*, section *Pronouns*; U.S. *Federal Plain Language Guidelines*; KTH writing guide, *Use of pronouns with a clear reference* — a demonstrative takes a noun ("set this value", never "set this"); name the actor; the sentence-relative "which" as the cure for "This is…" (rules 23, 24).
-17. U.S. *Federal Plain Language Guidelines* (plainlanguage.gov, GSA), from Garner, *Legal Writing in Plain English* 2001 and the Federal Register *Document Drafting Handbook* — keep the subject, verb, and object close together; write a topic sentence for every paragraph; place the main idea before exceptions and conditions (rules 26, 27 and 22).
+1. Gopen & Swan, *The Science of Scientific Writing*, American Scientist 78(6), 1990: topic and stress positions (rule 16).
+2. Weinberger, Evans & Allesina, *Ten Simple (Empirical) Rules for Writing Science*, PLoS Comp. Biol. 11(4), 2015: short sentences out-cite long ones (rule 17).
+3. Knuth, Cherry & Guibas, *Mathematical Writing*, 1989: no "clearly/obviously/trivially"; text must carry the argument (rule 19).
+4. Halmos, *How to Write Mathematics*: notation economy (rule 14).
+5. Dunloski et al., *Improving Students' Learning With Effective Learning Techniques*, PSPI 14(1), 2013: rereading low utility, retrieval and spacing high (rules 10, 35).
+6. Kobak et al., *Delving into ChatGPT usage in academic writing through excess vocabulary*, 2024: LLM excess vocabulary: *delve* ~25× above trend by 2024, *showcase* and *underscore* ~9×; ≥10% of 2024 PubMed abstracts carried LLM signs (rule 3).
+7. Wikipedia, *Signs of AI writing* (project page, retrieved 2026-10): the machine-sign catalog: significance puffery (AILEGACY), AI-vocabulary clusters (AIVOCAB), vague attribution (AIWEASEL), challenges-and-prospects closers (FACESCHALLENGES), superficial "-ing" analyses, rule-of-three (RO3), negative parallelisms, bold overuse (AIBOLD), Title Case headings, chat residue (COLLABCOMM), hedging disclaimers (AIDISCLAIMER), em-dash rhythm (AIDASH); plus the ineffective-indicators list and near-chance human detection studies (rules 20, 21, 30, 32).
+8. Ausubel, *Educational Psychology: A Cognitive View*, 1968: the advance organizer (rule 34).
+9. Bransford & Johnson, *Contextual prerequisites for understanding*, JVLVB 11(6), 1972: organizing context before reading raises comprehension of the same text (rule 34).
+10. Mayer, *Multimedia Learning*, 2nd ed., 2009: signaling aids selection and organization; redundancy costs learning (rules 34, 35).
+11. Marzano, Pickering & Pollock, *Classroom Instruction That Works*, 2001: summarization near d≈0.8 when the learner produces it; read against source 5, this settles rule 35 by making the reader produce something.
+12. Weinreich et al., *Not Quite the Average*, ACM TOWeb 2(1), 2008, and the Nielsen Norman analyses built on it: reading time grows ~4.4 s per extra 100 words, so conclusions belong at the front (rules 36, 37).
+13. Williams, Bizup & Trimble, *Style: Lessons in Clarity and Grace*, 12th ed., 2019: characters as subjects, actions as main verbs, zombie nouns, twenty-sentence self-check at ~70% (rule 25).
+14. Zeiger, *Write Right! Communication Skills for Practicing Engineers*, 2nd ed., 2000: engineering prose has no licence for ambiguity: repeat the noun (rule 24a).
+15. Sainani, *Writing in the Sciences*, Stanford University, since 2012: agent as subject, verbs instead of nominalisations (rule 25).
+16. Google, *Developer Documentation Style Guide*, section *Pronouns*; U.S. *Federal Plain Language Guidelines*; KTH writing guide, *Use of pronouns with a clear reference*: a demonstrative takes a noun ("set this value", never "set this"); name the actor; the sentence-relative "which" as the cure for "This is…" (rules 23, 24).
+17. U.S. *Federal Plain Language Guidelines* (plainlanguage.gov, GSA), from Garner, *Legal Writing in Plain English* 2001 and the Federal Register *Document Drafting Handbook*: keep the subject, verb, and object close together; write a topic sentence for every paragraph; place the main idea before exceptions and conditions (rules 26, 27 and 22).
 
