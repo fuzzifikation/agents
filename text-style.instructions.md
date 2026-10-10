@@ -21,7 +21,7 @@ Readers recall the law as eight invariants. The numbered rules are their consequ
 * **One name, one meaning.** Every reference resolves to one named thing; comparisons join matching types. (rules 11, 12, 13, 14, 15, 24)
 * **Assertions carry their support.** Conditions stated, sources named, or the claim goes. (rules 4, 19)
 * **Structure follows length.** The skim path leaves a correct model; openings and closings match the size of the unit. (rules 33–37)
-* **Reading is the audit.** Machines list candidates; the reader decides; replies are docs like files. (rules 28–32)
+* **Reading is the audit.** Machines list candidates; a rereader who is not the writer decides; replies are docs like files. (rules 28–32)
 
 ## 1 Cut on sight
 
@@ -66,7 +66,7 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 
 ## 5 Process
 
-28. **Reread as the reader, once, before sending.** For every changed paragraph: does the first sentence stand alone (rule 27), does the verb sit within a few words of the subject (rule 26), can you name each sentence's actor in three words (rule 25)? Reading load is the defect; greps cannot feel it.
+28. **Reread as the reader, once, before sending.** For every changed paragraph: does the first sentence stand alone (rule 27), does the verb sit within a few words of the subject (rule 26), can you name each sentence's actor in three words (rule 25)? Reading load is the defect; greps cannot feel it, and the writer's own reread is weak evidence: the writer reads intention, not words. The rereader may not be the writer: a human, or a fresh agent let loose on the changed text with this rulebook, reads once before it ships. The rereader reports stumbles, not praise; the writer then repairs each stumble in a second pass.
 29. **Replies are docs.** The law governs AI chat replies and reasoning exactly like files: the first sentence carries the point (rule 27), then the support. No sentence about your own previous message ("the mechanism answer stands as given"); no achievement lists about yourself; no clipped fragments standing in for content ("no theater, just work"). Brevity excuses nothing: an answer that fits in five sentences is five sentences, and those five still obey rules 26 and 27.
 30. **Formatting is not content.** Chatbots fake structure with formatting: bold on every instance of a term, "Label: fact" bullets, Title Case headings, scattered headings (skipped levels, one-line sections), "Key takeaways" boxes, emoji. Prose carries conclusions. Use bullets only where items are truly parallel, tables where the reader compares or executes, and sentence case for headings.
 31. **No manual line wraps.** You are not the editor; editors exist. A paragraph is one line: blank lines and headings break it, nothing else. Tables, command lists, code, and diagrams own their rows: one line per row, item, or entry, never re-wrapped by hand. Hand-wrapped source is permanent diff noise: it buries real changes under re-wraps in every future review.
