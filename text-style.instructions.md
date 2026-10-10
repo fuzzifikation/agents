@@ -143,36 +143,21 @@ Length decides structure. The table gives screen thresholds; print doubles them 
 
 A domain needs more than this file — typeset mathematics, legal, marketing. That law lives in the project holding the problem: for the adaptive-control lecture notes, `writing-rules.md` beside `main.tex`. When a second project needs the same rules, promote them upstream by hand.
 
-## 8 Closing test
+## 8 Worked examples
 
-Answer from memory. The eight invariants must be recallable; a rule you cannot tag to an invariant was not worth writing.
+Failing text and its fix, one line per case. The rule numbers carry the law behind each fix; cover them to self-test.
 
-1. "The bound holds only in the linear regime. In other words, outside it the bound says nothing." Which rule, and what survives?
-2. "We omit the argument from signals, but not their time dependence." Which rule, and what replaces it?
-3. You want to repeat a warning for the third time. What must the repeat carry to be legal?
-4. "Before adjusting a controller online we ask what we would do with known parameters." Which rule, and what is the fix?
-5. The skim path leaves a manager with the wrong conclusion. What is broken — the prose or the structure?
-6. "Robust control asks whether the closed loop is stable. There the unknown parameters still matter." Name both rules and both fixes.
-7. "The rate of convergence is fixed by the pole of the reference model, and the estimate carries the movement of the model itself." Name the rule and rewrite both halves.
-8. "The scope, the risks, the costs, and the timeline all live in this document." Which rule, and what replaces it?
-9. "Except as noted in §3, the upgrade runs automatically when the package is signed and the disk has room." Which rule, and what replaces it?
-10. Your reply is fifteen lines and its answer is one sentence. Which rule, and what is the fix?
-11. A README note ends with "**Key takeaways:**" and three bolded bullets. Name two rules and the fix.
-
-Answers:
-
-1. Rule 1 — cut one half, keep the half that carries the constraint: "The bound holds only in the linear regime."
-2. Rule 22 — "We omit the argument from time-dependent signals."
-3. A new consequence, a decision, or a marker naming where it was established (rules 8 and 9).
-4. Rule 15 — a parameter may be compared only with a parameter.
-5. The structure — rule 35; fix the order, not the adjectives.
-6. Rule 23 — a discipline cannot act: make the field a location, the engineer the actor. Rule 24 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds".
-7. Rule 25 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves".
-8. Rule 26 — five nouns in front of the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."
-9. Rule 22 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions".
-10. Rule 29 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were padding.
-11. Rule 30 — mechanical bold and a takeaways box fake structure. Rule 32 — a ≤500-word unit closes with nothing: state the one conclusion in prose or delete it.
-
+1. "The bound holds only in the linear regime. In other words, outside it the bound says nothing." Rule 1: the second sentence restates the first; keep the half that carries the constraint.
+2. "We omit the argument from signals, but not their time dependence." Rule 22: the main point died in a subordinate clause; write "We omit the argument from time-dependent signals."
+3. A warning for the third time. Rules 8 and 9: the repeat must carry a new consequence, a decision, or a marker naming where it was established.
+4. "Before adjusting a controller online we ask what we would do with known parameters." Rule 15: a parameter compares only with a parameter; fix the type, not the wording.
+5. The skim path leaves a manager with the wrong conclusion. Rule 35: the structure is broken, not the prose; fix the order, not the adjectives.
+6. "Robust control asks whether the closed loop is stable. There the unknown parameters still matter." Rule 23: a discipline cannot ask; the engineer asks, the field is the location. Rule 24: "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds."
+7. "The rate of convergence is fixed by the pole of the reference model, and the estimate carries the movement of the model itself." Rule 25: actors as subjects, actions as verbs: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves."
+8. "The scope, the risks, the costs, and the timeline all live in this document." Rule 26: five nouns in front of the verb; write "This document states the scope. §2 covers risks, §3 costs, §4 timeline."
+9. "Except as noted in §3, the upgrade runs automatically when the package is signed and the disk has room." Rule 22: main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions."
+10. A fifteen-line reply whose answer is one sentence. Rule 29: open with the answer and stop when the reader could act; the other fourteen lines were padding.
+11. A README note ending "**Key takeaways:**" plus three bolded bullets. Rule 30: mechanical bold and a takeaways box fake structure. Rule 32: a ≤500-word unit closes with nothing; state the one conclusion in prose or delete it.
 ## 9 Sources
 
 1. Gopen & Swan, *The Science of Scientific Writing*, American Scientist 78(6), 1990 — topic and stress positions (rule 16).
