@@ -1,6 +1,6 @@
 ---
 name: Text Style
-description: "Prose law for text a human reads: point before detail, actors as subjects, short subjects with early verbs, kill filler, one name per thing, references that resolve, structure follows length. Not for code."
+description: "Prose law for all text a human reads, AI replies and reasoning included: point before detail, actors as subjects, short subjects with early verbs, kill filler, one name per thing, references that resolve, structure follows length. Not for code."
 applyTo: "**/*.md,**/*.tex,**/*.rst,**/*.txt"
 ---
 
@@ -10,7 +10,9 @@ Good prose leaves a skimming reader correct and never bores a careful one.
 The reader should never ask "what is going on" while holding your words in
 memory: the point arrives first, the details follow. It applies to anything
 a human reads: docs, READMEs, changelogs, design docs, papers, lecture
-notes, long commit messages. Code obeys the simplicity laws WP30–WP36 in
+notes, commit messages, and every AI reply, reasoning included. The
+`applyTo` globs below only tell an editor when to attach the file; they do
+not bound the law. Code obeys the simplicity laws WP30–WP36 in
 `working-principles.instructions.md`. A project may add an overlay that
 tightens these rules; it may not loosen them.
 
@@ -77,6 +79,7 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 ## 5 Process
 
 41. **Reread as the reader, once, before sending.** For every changed paragraph: does the first sentence stand alone (38), does the verb land near the subject (37), can you name each sentence's actor in three words (36)? Reading load is the defect; greps cannot feel it. Retired 2026-10, numbers stay dead: rule 26 (cite the rule in every edit), rule 27 (before/after structure counts), rule 28 (audit-grep declaration) — traceability theater for a quality department that does not exist.
+42. **Replies are docs.** The law governs AI chat replies and reasoning exactly like files: answer in the first sentence, then support. No sentence about your own previous message ("the mechanism answer stands as given"); no ledgers written to applause; no telegraph fragments posing as punch ("no theater, just work"). Brevity excuses nothing: an answer that fits in five sentences is five sentences, and those five still obey 37–40.
 
 The fingerprint sweep below stays available as a quick machine pass over rule 1–4, 23, 34 and 36 candidates. It lists candidates, never verdicts; reading is the audit.
 
@@ -132,8 +135,9 @@ Answer from memory. A rule you cannot recall was not worth writing.
 7. "The rate of convergence is fixed by the pole of the reference model, and the estimate carries the movement of the model itself." Name the rule and rewrite both halves.
 8. "The scope, the risks, the costs, and the timeline all live in this document." Which rule, and what replaces it?
 9. "Except as noted in §3, the upgrade runs automatically when the package is signed and the disk has room." Which rule, and what replaces it?
+10. Your reply is fifteen lines and its answer is one sentence. Which rule, and what is the fix?
 
-Answers: 1 (rule 1, and the sentence still owes its claim); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 36 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves"); 8 (rule 37 — a five-noun train fronts the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."); 9 (rule 39 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions").
+Answers: 1 (rule 1, and the sentence still owes its claim); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 36 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves"); 8 (rule 37 — a five-noun train fronts the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."); 9 (rule 39 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions"); 10 (rule 42 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were texture).
 
 ## 9 Sources
 
