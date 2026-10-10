@@ -6,13 +6,13 @@ applyTo: "**/*.md,**/*.tex,**/*.rst,**/*.txt"
 
 # Text Style
 
-Good prose leaves a skimming reader correct and never bores a careful one. The reader should never ask "what is going on" while holding your words in memory: the point comes first, the details follow. It applies to anything a human reads: docs, READMEs, changelogs, design docs, papers, lecture notes, commit messages, and every AI reply, reasoning included. The `applyTo` globs below only tell an editor when to attach the file; they do not bound the law. Code obeys the simplicity laws WP30–WP36 in `working-principles.instructions.md`. A project may add an overlay that tightens these rules; it may not loosen them.
+Good prose leaves a skimming reader correct and never bores a careful one. The reader should never ask "what is going on" while holding your words in memory: the point comes first, the details follow. This law applies to anything a human reads: docs, READMEs, changelogs, design docs, papers, lecture notes, commit messages, and every AI reply, reasoning included. The `applyTo` globs below only tell an editor when to attach the file; they do not bound the law. Code obeys the simplicity laws WP30–WP36 in `working-principles.instructions.md`. A project may add an overlay that tightens these rules; it may not loosen them.
 
 Voice: dry, direct, mean about the engineering, never about the reader.
 
 Rules sit under their topic, numbered in reading order. Renumber the whole list whenever it changes, moving every cross-reference in the same edit. Git holds what was and why; the file never carries history.
 
-The law is recalled as eight invariants. The numbered rules are their consequences: lookup, not memory. A rule that cannot be tagged to an invariant is noise and dies.
+Readers recall the law as eight invariants. The numbered rules are their consequences: lookup, not memory. A rule that cannot be tagged to an invariant is noise and dies.
 
 * **Say something new or get cut.** Every sentence adds information, consequence, or example. (rules 1, 2, 3, 20, 21)
 * **Say it once.** A claim is stated in full where it is established; every later appearance is a pointer. (rules 8, 9, 10)
@@ -21,17 +21,17 @@ The law is recalled as eight invariants. The numbered rules are their consequenc
 * **One name, one meaning.** Every reference resolves to one named thing; comparisons join matching types. (rules 11, 12, 13, 14, 15, 24)
 * **Assertions carry their support.** Conditions stated, sources named, or the claim goes. (rules 4, 19)
 * **Structure follows length.** The skim path leaves a correct model; openings and closings match the size of the unit. (rules 33–37)
-* **Reading is the audit.** Machines list candidates; reading as the reader decides; replies are docs like files. (rules 28–32)
+* **Reading is the audit.** Machines list candidates; the reader decides; replies are docs like files. (rules 28–32)
 
 ## 1 Cut on sight
 
-1. **No two sentences with the same meaning.** When two consecutive sentences say the same thing, cut one; keep the clearer. “In other words”, “This means” and “That is” flag the test, they do not decide it: “Run `umixer check --strict`. This means CI fails on the first schema drift.” stays, because the second sentence adds a consequence the first does not spell out. A sentence must add information, consequence, or example; one that adds none, delete.
+1. **No two sentences with the same meaning.** When two consecutive sentences say the same thing, cut one; keep the clearer. “In other words”, “This means” and “That is” flag the test but do not decide it: “Run `umixer check --strict`. This means CI fails on the first schema drift.” stays, because the second sentence adds a consequence the first does not spell out. A sentence must add information, consequence, or example; one that adds none, delete.
 2. **One rhetorical template per section.** “X alone does not establish Y”, “is not sufficient evidence”, “does not certify”, “not X — Y”, “not only X but also Y”, “it is not about X, it is about Y”: each shape once per section, maximum. Nine identically shaped caveats read as machine text even when all nine are true.
 3. **No filler adjectives.** Banned: crucial, vital, key, powerful, robust (unless a term of art), significant/significantly (unless a statistical claim), seamless, inherent, pivotal, comprehensive, delve, leverage, showcase, underscore, facilitate, utilise, furthermore, moreover, notably, additionally, particularly, testament, landscape. A project's own terms of art are exempt: they name things.
-4. **Hidden logic becomes explicit.** Where "often", "typically", "generally" or "usually" hides a testable condition, write the condition: when it holds, and when it does not. "While", "as" and "since" hide which relation holds (time or contrast); write the one that holds. A sentence reporting only states names the decision or consequence that makes it worth stating; if it names none, delete it.
+4. **Hidden logic becomes explicit.** Where "often", "typically", "generally" or "usually" hides a testable condition, write the condition: when it holds, and when it does not. "While", "as" and "since" hide which relation holds (time or contrast); write the one that holds. If a sentence reports only states, it must name the decision or consequence that makes it worth stating; if it names none, delete it.
 5. **One image per idea, and never explain it.**
-6. **Stay in the subject's words; an analogy introduces itself.** Each subject has words it uses about itself; use those. In writing about writing these are: topic position, stress position, antecedent, hedge, register. "Punch", "pay rent", "has no mouth" are borrowed images, not terms of this subject. Any analogy is legal when it helps the reader understand and says what it is: "as an analogy", "think of this like". An unannounced analogy moves the reader out of the subject and back on every use; an announced one warns the reader before the switch.
-7. **No em dashes; parentheses carry asides.** The em-dash aside is THE giveaway of AI text; source 7 listed em-dash rhythm among the machine signs and this file capped its density instead, which missed the point. Parentheses carry asides and examples, beside the word they clarify: an example after the wrong noun makes the reader rule out the wrong reading before learning anything. A colon introduces, a comma binds apposition, a full stop emphasizes; a full stop is not a personality flaw. When items carry their own commas, separate them with semicolons: a list whose second tier shares the first tier punctuation makes the reader re-parse at every "and". Max one colon per sentence. Ranges and dates keep the en dash (rules 33–37, 2015–2024).
+6. **Stay in the subject's words; an analogy introduces itself.** Each subject has words it uses about itself; use those. In writing about writing these are: topic position, stress position, antecedent, hedge, register. "Punch", "pay rent", "has no mouth" are borrowed images, not terms of this subject. Any analogy is legal when it helps the reader understand and says what it is: "as an analogy", "think of this like". An unannounced analogy pulls the reader out of the subject on every use; an announced one warns before the move.
+7. **No em dashes; parentheses carry asides.** The em-dash aside is the giveaway of AI text; source 7 listed em-dash rhythm among the machine signs and this file capped its density instead, which missed the point. Parentheses carry asides and examples, beside the word they clarify: an example after the wrong noun makes the reader rule out the wrong reading before learning anything. A colon introduces, a comma binds apposition, a full stop emphasizes; a full stop is not a personality flaw. When items carry their own commas, separate them with semicolons: a list whose second tier shares the first tier makes the reader re-parse at every "and". Max one colon per sentence. Ranges and dates keep the en dash (rules 33–37, 2015–2024).
 
 ## 2 Repetition
 
@@ -62,7 +62,7 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 24. **A reference resolves to one named thing, of the right category.** Every pointing word owes this: `it`, `they`, `this`, `that`, `which`, `there`, `here`, `the latter`. (a) Two candidate antecedents: repeat the noun. "The text doesn't change", not "it doesn't change". (b) A demonstrative takes a noun ("this bound", "that choice"), never a bare "This is…". (c) A locative names its container, and the preposition matches that category: *in* a field, *in* a set, *in* an equation, *in* Case 4, *at* a frequency. "There the unknown parameters still matter" names no container, so the reader picks one. (d) After a display, never open with "Here $x$ is…". Name the display ("In \eqref{eq:PE}, $\succeq$ denotes…") or make the thing the subject ("The inequality $e_c^2\le2V_0$ follows from the Lyapunov bound"). (e) A sentence-level "…, which proves X" is legal only when the preceding clause is the sole possible referent. It is the prescribed cure for a bare "This is…", not a crime. (f) Exempt: existential "there is/are" points nowhere, and so does the cleft "it is the error variable *that* has an equilibrium". Test before shipping: name the antecedent in three words. If you cannot, the sentence has no content and no synonym will give it one.
 25. **Characters as subjects, actions as verbs.** "The designer chose a lower gain", not "a lower gain was chosen" and not "the choice of a lower gain was made". Williams' term: zombie nouns (*the convergence of*, *the implementation of*) delete actor and action at once. Self-check twenty consecutive sentences: at least 70% must take a character as subject and at least 70% an action as main verb. Rule 18 cuts the nominalisation; this one supplies the missing actor.
 26. **No long noun list as subject.** The verb comes within about five words of the subject; lists sit after the verb, never in front of it. "The plan, the decisions, the wire contract, the settings reference, and the structure rules all live here" forces the reader to hold five nouns in memory before learning what they do. It passes rules 16 and 25 and still puts the list before its point. Fix: "This file is the whole plan. It covers the wire contract, the settings, and the structure." (Federal Plain Language Guidelines: keep the subject, verb, and object close together.)
-27. **Every paragraph opens on its point, not on the document.** It states the paragraph’s point; a reader who skims only first sentences gets a correct, incomplete model of the section: rule 36’s skim test at paragraph scale. No document or section opens with “This file is…”, “This document discusses…”, “These notes cover…” Open on the thing itself: “Unified Mixers is one program that owns model traffic on machines you control.” A later line may speak about the document only when it carries a decision: “This file stays current; git holds the history.”
+27. **Every paragraph opens on its point, not on the document.** The first sentence states the paragraph’s point; a reader who skims only first sentences gets a correct, incomplete model of the section: rule 36’s skim test at paragraph scale. No document or section opens with “This file is…”, “This document discusses…”, “These notes cover…” Open on the thing itself: “Unified Mixers is one program that owns model traffic on machines you control.” A later line may speak about the document only when it carries a decision: “This file stays current; git holds the history.”
 
 ## 5 Process
 
@@ -70,17 +70,24 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 29. **Replies are docs.** The law governs AI chat replies and reasoning exactly like files: the first sentence carries the point (rule 27), then the support. No sentence about your own previous message ("the mechanism answer stands as given"); no achievement lists about yourself; no clipped fragments standing in for content ("no theater, just work"). Brevity excuses nothing: an answer that fits in five sentences is five sentences, and those five still obey rules 26 and 27.
 30. **Formatting is not content.** Chatbots fake structure with formatting: bold on every instance of a term, "Label: fact" bullets, Title Case headings, scattered headings (skipped levels, one-line sections), "Key takeaways" boxes, emoji. Prose carries conclusions. Use bullets only where items are truly parallel, tables where the reader compares or executes, and sentence case for headings.
 31. **No manual line wraps.** You are not the editor; editors exist. A paragraph is one line: blank lines and headings break it, nothing else. Tables, command lists, code, and diagrams own their rows. Hand-wrapped source is permanent diff noise: it buries real changes under re-wraps in every future review.
-32. **No chatbot residue.** Correspondence is not text: “Certainly!”, “Great question”, “I hope this helps”, “let me know if you'd like…” cut on sight. Text does not narrate its own making (“I kept your wording”, “based on the provided sources”).
+32. **No chatbot residue.** Pleasantry is not text: “Certainly!”, “Great question”, “I hope this helps”, “let me know if you'd like…” cut on sight. Text does not narrate its own making (“I kept your wording”, “based on the provided sources”).
 
-The pattern sweep below stays available as a quick machine pass over rules 1–3, 20, 23 and 25 candidates. It lists candidates, never verdicts; reading is the audit.
+The pattern sweep below stays available as a quick machine pass for candidates under rules 1–3, 20, 23, and 25. It lists candidates, never verdicts; reading is the audit.
 
 ```sh
+# grep 1
 grep -rniE 'in other words|this means|it can be shown|it is well known|clearly|obvious|trivial|simply' --include='*.md' --include='*.tex' .
+# grep 2
 grep -rniE 'delve|showcas|underscor|crucial|vital|notably|additionally|particularly|comprehensive|leverag|facilitat|utiliz|pivotal|seamless|landscape|testament|significantly' --include='*.md' --include='*.tex' .
+# grep 3
 grep -rniE 'does not establish|not sufficient|not a proof|not certify|does not by itself|alone does not' --include='*.md' --include='*.tex' .
+# grep 4
 grep -rniE ', (ensuring|highlighting|underscoring|showcasing|demonstrating|indicating|reflecting|enabling|revealing)|not only|in summary|in conclusion|^overall|together, these|it is important' --include='*.md' --include='*.tex' .
+# grep 5
 grep -rniE '\b(control|theory|field|discipline|method|approach|framework|literature|objective|definition|problem|analysis|design|chapter|section)\s+(asks|wants|argues|claims|believes|knows|worries|cares|insists|admits|prefers|refuses|decides|settles|forgets|remembers|notes|observes)\b' --include='*.md' --include='*.tex' .
+# grep 6
 grep -rniE '(^|[.;:] )(This|That|These|Those)\s+(is|are|shows|proves|means|follows|fails|gives|makes|leaves|requires|explains|implies)|(^|[.;:] )It\s+(is|does|follows|holds|can|may|gives|needs|makes|costs)|(^|[.;:] )(There|Here)[,\s]' --include='*.md' --include='*.tex' .
+# grep 7
 grep -rniE '\b(the|this|that|a|an|its|our|their)\s+([a-z]+(tion|sion|ment|ance|ence|ing))\s+of\b' --include='*.md' --include='*.tex' .
 ```
 
@@ -110,7 +117,7 @@ Three standing false positives:
 
 ## 6 Long texts
 
-Length decides structure. The table gives screen thresholds; print doubles them because studied text is read more slowly than scanned text. Say which you used.
+Length decides structure. The table gives screen thresholds; print doubles them because studied text is read more slowly than scanned text. Say which scale you applied.
 
 | Unit length | Opening | Closing |
 |---|---|---|
@@ -123,7 +130,7 @@ Length decides structure. The table gives screen thresholds; print doubles them 
 34. **A long unit opens with a preview, never an announcer.** The preview delivers the conclusion, the order of the argument and why that order, and the decision the reader can make afterwards. Under ~120 words for a chapter. If the conclusion will not fit in the first sentence, the unit has no point yet: find it before writing prose.
 35. **A long unit closes by consolidating, not paraphrasing.** At most five items, each one of: a retrieval prompt the reader answers from memory; a consequence statement (what the result forbids, what fails if the assumption is dropped); a decision rule for practice. Never a prose restatement of the unit's own sentences.
 36. **Pass the skim test.** Title, headings, the first paragraph of each unit and the last consolidation must leave the reader with a correct but incomplete model, never a wrong one. If the skim path misleads, fix the structure: move the conclusion up, rename the heading, or rewrite the preview.
-37. **Front matter for decision-makers stands alone.** State the conclusion, the ask, the cost and the risk. Order by importance, not by discovery, so every paragraph survives being the last one read. Where the discipline expects method-first (a paper’s IMRaD, a proof’s lemma sequence), keep the discipline and put the conclusion in the abstract.
+37. **Front matter for decision-makers stands alone.** State the conclusion, the request, the cost and the risk. Order by importance, not by discovery, so every paragraph survives being the last one read. Where the discipline expects method-first (a paper’s IMRaD, a proof’s lemma sequence), keep the discipline and put the conclusion in the abstract.
 
 ## 7 Overlays
 
@@ -131,7 +138,7 @@ A domain needs more than this file (typeset mathematics, legal, marketing). That
 
 ## 8 Worked examples
 
-Failing text and its fix, one line per case. The rule numbers carry the law behind each fix; cover them to self-test.
+Failing text and its fix, one line per case, with the rule behind each fix named.
 
 1. "The bound holds only in the linear regime. In other words, outside it the bound says nothing." Rule 1: the second sentence restates the first; keep the half that carries the constraint.
 2. "We omit the argument from signals, but not their time dependence." Rule 22: the main point died in a subordinate clause; write "We omit the argument from time-dependent signals."
@@ -144,6 +151,7 @@ Failing text and its fix, one line per case. The rule numbers carry the law behi
 9. "Except as noted in §3, the upgrade runs automatically when the package is signed and the disk has room." Rule 22: main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions."
 10. A fifteen-line reply whose answer is one sentence. Rule 29: open with the answer and stop when the reader could act; the other fourteen lines were padding.
 11. A README note ending "**Key takeaways:**" plus three bolded bullets. Rule 30: mechanical bold and a takeaways box fake structure. Rule 33: a ≤500-word unit closes with nothing; state the one conclusion in prose or delete it.
+
 ## 9 Sources
 
 1. Gopen & Swan, *The Science of Scientific Writing*, American Scientist 78(6), 1990: topic and stress positions (rule 16).
