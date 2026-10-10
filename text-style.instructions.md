@@ -79,6 +79,8 @@ Unmarked repetition is a defect: the reader cannot tell emphasis from accident, 
 
 41. **Reread as the reader, once, before sending.** For every changed paragraph: does the first sentence stand alone (38), does the verb land near the subject (37), can you name each sentence's actor in three words (36)? Reading load is the defect; greps cannot feel it. Retired 2026-10, numbers stay dead: rule 1 (announcers on sight — real technical docs navigate with "as we will see" and "in §2 we prove X"; rules 2 and 24 catch the padding), rule 26 (cite the rule in every edit), rule 27 (before/after structure counts), rule 28 (audit-grep declaration) — the last three traceability theater for a quality department that does not exist.
 42. **Replies are docs.** The law governs AI chat replies and reasoning exactly like files: answer in the first sentence, then support. No sentence about your own previous message ("the mechanism answer stands as given"); no ledgers written to applause; no telegraph fragments posing as punch ("no theater, just work"). Brevity excuses nothing: an answer that fits in five sentences is five sentences, and those five still obey 37–40.
+43. **Formatting is not content.** Mechanical bold (every instance of a term, "Label: fact" bullets), Title Case headings, heading confetti (skipped levels, one-line sections, a heading over a heading), "Key takeaways" boxes, emoji garnish: chatbots fake structure this way. Prose carries conclusions. Bullets only where items are truly parallel; tables where the reader compares or executes; headings in sentence case.
+44. **No chatbot residue.** Correspondence is not text: "Certainly!", "Great question", "I hope this helps", "let me know if you'd like…" die on sight. Text does not narrate its own making ("I kept your wording", "based on the provided sources", "while specific details are limited"), and no claim leans on an invisible authority: "studies show", "experts argue", "industry reports" — name them or drop the claim.
 
 The fingerprint sweep below stays available as a quick machine pass over rule 2–4, 23, 34 and 36 candidates. It lists candidates, never verdicts; reading is the audit.
 
@@ -99,6 +101,22 @@ Three standing false positives:
 * **Grep 7 (rule 36) and its evil twin.** "*the convergence of*", "*the implementation of*" name a hidden actor. Never audit rule 36 with an `is/are` + participle grep: in technical prose *is bounded*, *is stable*, *is Hurwitz*, *is positive definite* are predicate adjectives, not hidden actors. One such grep reported 32 violations in a chapter where 24 were "is bounded".
 * **Grep 2 and grep 4 keep the load-bearing words.** "additionally" inside a definition ("asymptotic stability additionally requires convergence") states an extra condition; "not only" ("holds from every initial state, not only from nearby ones") excludes a real alternative. Both stay.
 * **Math nouns are not zombie nouns.** "the solution of the Lyapunov equation", "a function of $x$", "the derivative of the bound" are the subject, not a verb in disguise.
+
+**Machine tells.** Wikipedia's *Signs of AI writing* and the excess-vocabulary study catalog what betrays machine text. Most of it the law already kills; what follows dies here too, unless a tell earns its place:
+
+* Significance puffery: "stands/serves as a", "is a testament to", "plays a crucial role", "underscores its importance", "reflects broader trends", "marks a turning point", "indelible mark", "evolving landscape" — rule 4 kills the words; the inflated sentences die with them.
+* Copula dodging: "serves as", "stands as", "represents", "constitutes" where "is" works; the dodge is the tell.
+* Vague attribution: "experts argue", "observers cite", "industry reports", "studies show" with no expert, report or study named — name it or drop the claim (rule 22's kin).
+* Challenges-and-prospects closers: "Despite its success, X faces challenges…", "Future Outlook" sections — rule 24's padding at section scale.
+* AI-vocabulary clusters: rule 4 words co-occur, one predicts the others; density betrays, a lone word does not (source 6).
+* Superficial "-ing" tails: "highlighting", "ensuring", "fostering", "cultivating", "encompassing" (rule 23).
+* Negative parallelisms: "not only X but Y", "it is not just X, it's Y", "X rather than Y" where the contrast is decoration (rules 8, 24; rule 18 when the halves are different types).
+* Adjective or phrase triples where two items serve (rule 24).
+* Dash rhythm: the formulaic "punch — landing" dash. Dense use betrays; presence does not. Rule 7 caps each sentence; the page rhythm is yours to judge.
+* Formatting tells: bold-for-emphasis everywhere, bold-label bullets, Title Case headings, heading confetti, emoji (rule 43).
+* Chat residue and procedural self-narration: "Certainly!", "I hope this helps", "let me know", "I preserved your wording", "while details are scarce" (rule 44).
+
+**Proves nothing.** Wikipedia's own false-positive list: perfect grammar, formal or mixed register, blandness, one lone dash, one lone "delve". A tell counts in clusters, and 2025 studies put human detection of machine text near chance — so reading stays the audit (rule 41), never tell-policing. Human prose drifts toward machine prose, not the reverse: the drift you defend against is your own.
 
 ## 6 Long texts
 
@@ -135,8 +153,9 @@ Answer from memory. A rule you cannot recall was not worth writing.
 8. "The scope, the risks, the costs, and the timeline all live in this document." Which rule, and what replaces it?
 9. "Except as noted in §3, the upgrade runs automatically when the package is signed and the disk has room." Which rule, and what replaces it?
 10. Your reply is fifteen lines and its answer is one sentence. Which rule, and what is the fix?
+11. A README note ends with "**Key takeaways:**" and three bolded bullets. Name two rules and the fix.
 
-Answers: 1 (rule 2 — one half dies; the half that carries the constraint stays: "The bound holds only in the linear regime."); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 36 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves"); 8 (rule 37 — a five-noun train fronts the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."); 9 (rule 39 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions"); 10 (rule 42 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were texture).
+Answers: 1 (rule 2 — one half dies; the half that carries the constraint stays: "The bound holds only in the linear regime."); 2 (rule 25: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 10, 11); 4 (rule 18: a parameter may be compared only with a parameter); 5 (the structure — rule 32; fix the order, not the adjectives); 6 (rule 34 — a discipline has no mouth, so make the field a location and the engineer the actor; rule 35 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 36 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves"); 8 (rule 37 — a five-noun train fronts the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."); 9 (rule 39 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions"); 10 (rule 42 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were texture); 11 (rule 43 — mechanical bold and a takeaways box fake structure; rule 29 — a ≤500-word unit closes with nothing: state the one conclusion in prose or delete it).
 
 ## 9 Sources
 
@@ -146,7 +165,7 @@ Answers: 1 (rule 2 — one half dies; the half that carries the constraint stays
 4. Halmos, *How to Write Mathematics* — notation economy (rule 17).
 5. Dunloski et al., *Improving Students' Learning With Effective Learning Techniques*, PSPI 14(1), 2013 — rereading low utility, retrieval and spacing high (rules 13, 31).
 6. Kobak et al., *Delving into ChatGPT usage in academic writing through excess vocabulary*, 2024 — LLM excess vocabulary: *delve* ~25× above trend by 2024, *showcase* and *underscore* ~9×; ≥10% of 2024 PubMed abstracts carried LLM fingerprints (rule 4).
-7. Wikipedia, *Signs of AI writing* — rule-of-three padding, "-ing" tails, sectional summaries, negative parallelism, hedged assertions (rules 23, 24).
+7. Wikipedia, *Signs of AI writing* (project page, retrieved 2026-10) — the machine-tell catalog: significance puffery (AILEGACY), AI-vocabulary clusters (AIVOCAB), vague attribution (AIWEASEL), challenges-and-prospects closers (FACESCHALLENGES), superficial "-ing" analyses, rule-of-three (RO3), negative parallelisms, bold overuse (AIBOLD), Title Case headings, chat residue (COLLABCOMM), hedging disclaimers (AIDISCLAIMER), em-dash rhythm (AIDASH); plus the ineffective-indicators list and near-chance human detection studies (rules 23, 24, 43, 44).
 8. Ausubel, *Educational Psychology: A Cognitive View*, 1968 — the advance organizer (rule 30).
 9. Bransford & Johnson, *Contextual prerequisites for understanding*, JVLVB 11(6), 1972 — organizing context before reading raises comprehension of the same text (rule 30).
 10. Mayer, *Multimedia Learning*, 2nd ed., 2009 — signaling aids selection and organization; redundancy costs learning (rules 30, 31).
