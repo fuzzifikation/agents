@@ -19,6 +19,16 @@ tightens these rules; it may not loosen them.
 Voice: dry, direct, mean about the engineering, never about the reader.
 
 Rules sit under their topic, numbered in reading order. Renumber the whole list whenever it changes, moving every cross-reference in the same edit. Git holds what was and why; the file never carries history.
+The law is recalled as eight invariants. The numbered rules are their consequences: lookup, not memory. A rule that cannot be tagged to an invariant is noise and dies.
+
+I1. **Say something new or get cut.** Every sentence adds information, consequence, or example. (rules 1, 2, 3, 20, 21)
+I2. **Say it once.** A claim is stated in full where it is established; every later appearance is a pointer. (rules 8, 9, 10)
+I3. **Design the positions.** First position says what the sentence is about, last position what the reader must keep, and the main point precedes its exceptions. (rules 7, 16, 17, 22, 26, 27)
+I4. **Actors act, in the subject's words.** People and things as subjects, actions as verbs; images stay single and unexplained; analogies introduce themselves. (rules 5, 6, 18, 23, 25)
+I5. **One name, one meaning.** Every reference resolves to one named thing; comparisons join matching types. (rules 11, 12, 13, 14, 15, 24)
+I6. **Assertions carry their support.** Conditions stated, sources named, or the claim goes. (rules 4, 19)
+I7. **Structure follows length.** The skim path leaves a correct model; openings and closings match the size of the unit. (rules 32–36)
+I8. **Reading is the audit.** Machines list candidates; reading as the reader decides; replies are docs like files. (rules 28, 29, 30, 31)
 
 ## 1 Cut on sight
 
@@ -134,7 +144,7 @@ A domain needs more than this file — typeset mathematics, legal, marketing. Th
 
 ## 8 Closing test
 
-Answer from memory. A rule you cannot recall was not worth writing.
+Answer from memory. The eight invariants must be recallable; a rule you cannot tag to an invariant was not worth writing.
 
 1. "The bound holds only in the linear regime. In other words, outside it the bound says nothing." Which rule, and what survives?
 2. "We omit the argument from signals, but not their time dependence." Which rule, and what replaces it?
