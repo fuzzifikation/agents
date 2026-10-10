@@ -148,7 +148,19 @@ Answer from memory. A rule you cannot recall was not worth writing.
 10. Your reply is fifteen lines and its answer is one sentence. Which rule, and what is the fix?
 11. A README note ends with "**Key takeaways:**" and three bolded bullets. Name two rules and the fix.
 
-Answers: 1 (rule 1 — cut one half, keep the half that carries the constraint: "The bound holds only in the linear regime."); 2 (rule 22: "We omit the argument from time-dependent signals."); 3 (a new consequence, a decision, or a marker naming where it was established — rules 8 and 9); 4 (rule 15: a parameter may be compared only with a parameter); 5 (the structure — rule 35; fix the order, not the adjectives); 6 (rule 23 — a discipline cannot act, so make the field a location and the engineer the actor; rule 24 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds"); 7 (rule 25 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves"); 8 (rule 26 — five nouns in front of the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."); 9 (rule 22 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions"); 10 (rule 29 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were padding); 11 (rule 30 — mechanical bold and a takeaways box fake structure; rule 32 — a ≤500-word unit closes with nothing: state the one conclusion in prose or delete it).
+Answers:
+
+1. Rule 1 — cut one half, keep the half that carries the constraint: "The bound holds only in the linear regime."
+2. Rule 22 — "We omit the argument from time-dependent signals."
+3. A new consequence, a decision, or a marker naming where it was established (rules 8 and 9).
+4. Rule 15 — a parameter may be compared only with a parameter.
+5. The structure — rule 35; fix the order, not the adjectives.
+6. Rule 23 — a discipline cannot act: make the field a location, the engineer the actor. Rule 24 — "There" named no container, so name one: "Inside that uncertainty set, the plant parameters still matter, provided the bound holds".
+7. Rule 25 — the pole is the actor and the model moves: "The reference-model pole fixes the rate of convergence, and the estimate also includes how the model itself moves".
+8. Rule 26 — five nouns in front of the verb: "This document states the scope. §2 covers risks, §3 costs, §4 timeline."
+9. Rule 22 — main point first, conditions split: "The upgrade runs automatically. It needs a signed package and free disk; §3 lists exceptions".
+10. Rule 29 — the reply opens with the answer and stops when the reader could act; the remaining fourteen lines were padding.
+11. Rule 30 — mechanical bold and a takeaways box fake structure. Rule 32 — a ≤500-word unit closes with nothing: state the one conclusion in prose or delete it.
 
 ## 9 Sources
 
