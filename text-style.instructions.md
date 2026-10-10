@@ -92,7 +92,7 @@ Three standing false positives:
 * **Grep 2 and grep 4 keep the necessary hits.** "additionally" inside a definition ("asymptotic stability additionally requires convergence") states an extra condition; "not only" ("holds from every initial state, not only from nearby ones") excludes a real alternative. Both stay.
 * **Math nouns are not zombie nouns.** "the solution of the Lyapunov equation", "a function of $x$", "the derivative of the bound" are the subject, not a verb in disguise.
 
-**Machine signs.** Wikipedia's *Signs of AI writing* and the excess-vocabulary study catalog the habits of machine text. The rules above already cut most of them; a sign listed here is cut where it appears, unless it carries the meaning:
+**Machine signs.** Wikipedia's *Signs of AI writing* and the excess-vocabulary study catalog the habits of machine text. The rules above already cut most of them; a sign listed here is cut where it appears, unless it carries the meaning. Every sign a grep can see is grepped before sending, never judged: a hit is cut or rewritten on the spot, not argued with. The catalog:
 
 * Significance puffery: "stands/serves as a", "is a testament to", "plays a crucial role", "underscores its importance", "reflects broader trends", "marks a turning point", "indelible mark", "evolving landscape". Rule 3 cuts the words; the inflated sentences go with them.
 * Copula avoidance: "serves as", "stands as", "represents", "constitutes" where "is" works; the avoidance is the sign.
