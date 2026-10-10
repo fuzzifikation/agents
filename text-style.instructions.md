@@ -25,7 +25,7 @@ in numeric order: 34–36 belong to §4 and sit after 25. Do not "fix" that.
 
 ## 1 Kill criteria
 
-2. **No paraphrase twins.** When a sentence starts "In other words", "This means" or "That is,", one of its two halves dies. A sentence must add information, a consequence, or an example; if it adds none, delete it.
+2. **No paraphrase twins.** When two consecutive sentences say the same thing, one dies; the clearer half survives. “In other words”, “This means” and “That is” are flags to run the test, not death sentences: “Run `umixer check --strict`. This means CI fails on the first schema drift.” lives, because the second sentence carries a consequence the first does not spell out. A sentence must add information, consequence, or example; one that adds none, delete.
 3. **One rhetorical template per section.** "X alone does not establish Y", "is not sufficient evidence", "does not certify": each shape once per section. Nine identically shaped caveats is a machine fingerprint even when all nine are true.
 4. **No filler adjectives.** Banned: crucial, vital, key, powerful, robust (unless a term of art), significant/significantly (unless a statistical claim), seamless, inherent, pivotal, comprehensive, delve, leverage, showcase, underscore, facilitate, utilise, furthermore, moreover, notably, additionally, particularly, testament, landscape. A project's own terms of art are exempt: they name things.
 5. **Adverbs become conditions.** Where "often", "typically", "generally" or "usually" hides a testable condition, write the condition: when it holds, and when it does not.
