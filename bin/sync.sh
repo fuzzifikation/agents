@@ -2,7 +2,8 @@
 # Vendor this repo's AI customizations into another repo (or the VS Code user profile).
 # POSIX sh: runs on Linux, WSL, macOS. Windows twin: bin/sync.ps1
 #
-#   sync.sh [--agents] [--user] <target-repo-path>
+#   sync.sh [--agents] [--extensions] [--user] <target-repo-path>
+#   --extensions also vendors the VS Code extension law (TS/VS Code repos only).
 #
 # Copies are stamped with this clone's commit. No network, no git on the clone:
 # you decide when upstream is fresh (git -C <clone> pull --ff-only), then re-run.
@@ -12,14 +13,16 @@ SRC=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 SHA=$(git -C "$SRC" rev-parse --short HEAD 2>/dev/null || echo unknown)
 STAMP="<!-- vendored from fuzzifikation/agents @ $SHA, synced $(date -u +%Y-%m-%d). Do not edit here: edit upstream and re-run bin/sync -->"
 
-usage() { echo "usage: sync.sh [--agents] [--user] <target-repo-path>" >&2; exit 2; }
+usage() { echo "usage: sync.sh [--agents] [--extensions] [--user] <target-repo-path>" >&2; exit 2; }
 
 WITH_AGENTS=0
+WITH_EXT=0
 INTO_USERS=0
 TARGET=""
 while [ $# -gt 0 ]; do
   case $1 in
     --agents) WITH_AGENTS=1 ;;
+    --extensions) WITH_EXT=1 ;;
     --user)   INTO_USERS=1 ;;
     -h|--help) usage ;;
     -*) usage ;;
@@ -59,6 +62,10 @@ vendor() {
 echo "sync -> $DEST"
 vendor "$SRC/working-principles.instructions.md" "$DEST/instructions/working-principles.instructions.md"
 vendor "$SRC/text-style.instructions.md" "$DEST/instructions/text-style.instructions.md"
+vendor "$SRC/tooling-gotchas.instructions.md" "$DEST/instructions/tooling-gotchas.instructions.md"
+if [ "$WITH_EXT" -eq 1 ]; then
+  vendor "$SRC/vscode-extension.instructions.md" "$DEST/instructions/vscode-extension.instructions.md"
+fi
 
 if [ "$WITH_AGENTS" -eq 1 ]; then
   vendor "$SRC/structural-review.agent.md" "$DEST/agents/structural-review.agent.md"

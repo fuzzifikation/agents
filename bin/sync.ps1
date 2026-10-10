@@ -2,18 +2,20 @@
 # Vendor this repo's AI customizations into another repo (or the VS Code user profile).
 # Windows twin of bin/sync.sh — keep the two in step.
 #
-#   sync.ps1 [-Agents] [-User] <target-repo-path>
+#   sync.ps1 [-Agents] [-Extensions] [-User] <target-repo-path>
+#   -Extensions also vendors the VS Code extension law (TS/VS Code repos only).
 #
 # Copies are stamped with this clone's commit. No network, no git on the clone.
 # Runs on Windows PowerShell 5.1 and pwsh 7: no -ContainerPath, no ternaries.
 [CmdletBinding()]
 param(
   [switch]$Agents,
+  [switch]$Extensions,
   [switch]$User,
   [Parameter(Position = 0)][string]$Target
 )
 $ErrorActionPreference = 'Stop'
-if (-not $Target) { Write-Host 'usage: sync.ps1 [-Agents] [-User] <target-repo-path>' 2>&1; exit 2 }
+if (-not $Target) { Write-Host 'usage: sync.ps1 [-Agents] [-Extensions] [-User] <target-repo-path>' 2>&1; exit 2 }
 
 function Test-Folder([string]$p) { Test-Path -LiteralPath $p -PathType Container }
 
@@ -69,6 +71,10 @@ function Vendor([string]$SrcFile, [string]$DstFile) {
 Write-Host "sync -> $Dest"
 Vendor (Join-Path $Src 'working-principles.instructions.md') (Join-Path $Dest 'instructions\working-principles.instructions.md')
 Vendor (Join-Path $Src 'text-style.instructions.md') (Join-Path $Dest 'instructions\text-style.instructions.md')
+Vendor (Join-Path $Src 'tooling-gotchas.instructions.md') (Join-Path $Dest 'instructions\tooling-gotchas.instructions.md')
+if ($Extensions) {
+  Vendor (Join-Path $Src 'vscode-extension.instructions.md') (Join-Path $Dest 'instructions\vscode-extension.instructions.md')
+}
 
 if ($Agents) {
   Vendor (Join-Path $Src 'structural-review.agent.md') (Join-Path $Dest 'agents\structural-review.agent.md')
