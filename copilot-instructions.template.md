@@ -4,7 +4,8 @@
 > `.github/instructions/working-principles.instructions.md` (upstream:
 > `fuzzifikation/agents`, re-sync with `bin/sync.ps1` / `bin/sync.sh`). Git/push
 > discipline, version and release law, changelog epistemology, review governance,
-> verification laws, simplicity laws and communication style live there and apply
+> verification laws, bug-diagnosis law, simplicity laws and communication style live
+> there and apply
 > to every repo. Shell and tooling traps: `.github/instructions/tooling-gotchas.instructions.md`.
 > **Everything below is this project only.**
 

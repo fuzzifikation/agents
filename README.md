@@ -6,7 +6,7 @@ A home for agents and working rules that were developed while working *with* AI,
 
 | Path | What it is |
 |---|---|
-| [`working-principles.instructions.md`](working-principles.instructions.md) | How an AI partner must operate on this owner's repos: git/push discipline, version and release law, changelog epistemology, review governance, verification laws, simplicity laws. Project-agnostic by design. |
+| [`working-principles.instructions.md`](working-principles.instructions.md) | How an AI partner must operate on this owner's repos: git/push discipline, version and release law, changelog epistemology, review governance, verification laws, bug-diagnosis law, simplicity laws. Project-agnostic by design. |
 | [`copilot-instructions.template.md`](copilot-instructions.template.md) | Starting point for each repo's own `copilot-instructions.md`: the project-specific skeleton (scope, commands, architecture invariants, anti-patterns, standing rulings) plus sane defaults. The general law stays vendored, never restated. |
 | [`text-style.instructions.md`](text-style.instructions.md) | Prose law for anything a human reads: fluff kill criteria, marked-repetition protocol, sentence architecture, naming discipline, audit greps, sources. Globbed to prose files so it stays out of pure-code sessions. |
 | [`tooling-gotchas.instructions.md`](tooling-gotchas.instructions.md) | Field-tested shell, Node, git and packaging traps that fail silently: PowerShell encoders, truncated inventories, escape-level fuzzy edits, stale AST properties, staging-dir law. Every tool that lies without throwing an exception. |
